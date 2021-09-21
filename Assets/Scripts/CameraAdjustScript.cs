@@ -39,6 +39,7 @@ public class CameraAdjustScript : MonoBehaviour
         {
             zoom(-zoomVelocity * Time.deltaTime);
         }
+        mainCamera.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y,rope.transform.GetChild(0).position.z);
     }
 
     void zoom(float increment)
